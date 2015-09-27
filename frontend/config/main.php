@@ -28,6 +28,22 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'view' => [
+            'class' => 'yii\web\View',
+            'renderers' => [
+                'html' => [         //如果这里是html就会解析html为扩展名的文件，如果是twig就会解析twig为后缀的文件
+                    'class' => 'yii\twig\ViewRenderer',
+                    'cachePath' => '@runtime/Twig/cache',
+                    // Array of twig options:
+                    'options' => [
+                        'auto_reload' => true,
+                    ],
+                    'globals' => ['html' => '\yii\helpers\Html'],
+                    'uses' => ['yii\bootstrap'],
+                ],
+                // ...
+            ],
+        ],
     ],
     'params' => $params,
 ];

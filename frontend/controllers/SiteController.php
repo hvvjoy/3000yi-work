@@ -72,7 +72,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $data = [
+            'user' => 'Hugo.huang',
+        ];
+        return $this->render('index.twig',$data);
     }
 
     /**
