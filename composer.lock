@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0d453e8bd8e00ad909f34c38d47107f6",
-    "content-hash": "a1e3f51c91464d7f8b5f7f1647092b97",
+    "hash": "42f21c5e1b9a3ebf21d34e84744bdd94",
+    "content-hash": "0bf75b238b5cd54cd3b8e6abfae51db5",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -615,54 +615,6 @@
                 "yii2"
             ],
             "time": "2015-03-01 06:22:44"
-        },
-        {
-            "name": "yiisoft/yii2-mongodb",
-            "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yiisoft/yii2-mongodb.git",
-                "reference": "8f959240e17bfdab6fb4e16be078b81b461988a2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-mongodb/zipball/8f959240e17bfdab6fb4e16be078b81b461988a2",
-                "reference": "8f959240e17bfdab6fb4e16be078b81b461988a2",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mongo": ">=1.5.0",
-                "yiisoft/yii2": ">=2.0.4"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "yii\\mongodb\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Paul Klimov",
-                    "email": "klimov.paul@gmail.com"
-                }
-            ],
-            "description": "MongoDb extension for the Yii framework",
-            "keywords": [
-                "active-record",
-                "mongo",
-                "mongodb",
-                "yii2"
-            ],
-            "time": "2015-05-10 22:10:01"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",

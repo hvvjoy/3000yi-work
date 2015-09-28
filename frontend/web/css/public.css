@@ -1,11 +1,52 @@
 
+ul{
+	list-style: none;
+}
 .top{
 	height:60px;border-bottom:1px solid #ccc;background:#222;box-shadow:0 0px 5px 2px gray;
 }
-
+.ml-5{
+	margin-left: 5px;
+}
+.mr-5{
+	margin-right: 5px;
+}
+.ml-10{
+	margin-left:10px;
+}
+.mr-10{
+	margin-right: 10px;
+}
+.mt-10{
+	margin-top: 10px;
+}
+.mb-10{
+	margin-bottom: 10px;
+}
+.mt-20{
+	margin-top: 20px;
+}
 .mb-20{
 	margin-bottom: 20px;
 }
+
+.f-left{
+	float:left;
+}
+.f-right{
+	float:right;
+}
+
+.bd-gray-1{
+	border:1px solid #666;
+}
+
+
+
+
+
+
+
 
 .h-max{
 	height:100%;
@@ -14,17 +55,12 @@
 	height:inherit;
 }
 
-/* sidebar */
-    body,html{
-		height: 100%;
-	}
-
-	/* remove outer padding */
-	.main .row{
-		padding: 0px;
-		margin: 0px;
-	}
-
+.page-left{
+	width:200px;
+}
+.page-right{
+	width:80%;
+}
 	/*Remove rounded coners*/
 
 	nav.sidebar.navbar {
@@ -43,8 +79,11 @@
 		padding: 10px 10px 0 10px;
 	}
 
-	/* .....NavBar: Icon only with coloring/layout.....*/
-
+	#nav-btn{
+		border: 1px solid #aaa;
+    color: #fff;
+    margin-right: 18px;
+	}
 	/*small/medium side display*/
 	@media (min-width: 768px) {
 
@@ -77,10 +116,6 @@
 			padding-right: 13px;
 		}
 
-		/*adds border top to first nav box */
-		nav.sidebar .navbar-nav > li:first-child{
-			border-top: 1px solid;
-		}
 
 		/*adds border to bottom nav boxes*/
 		nav.sidebar .navbar-nav > li{
@@ -106,7 +141,7 @@
 
 		/*colors dropdown box text */
 		.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-			color: #777;
+			color: #eee;
 		}
 
 		/*gives sidebar width/height*/
@@ -157,9 +192,20 @@
 
 	nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
 		color: #CCC;
-		background-color: transparent;
+		background-color: #000;
 	}
-
+	#navbar li a{
+		color:#eee;
+	}
+	#navbar li:hover{
+		background: #000;
+	}
+	#navbar2 li a{
+		color:#eee;
+	}
+	#navbar2 li:hover{
+		background: #000;
+	}
 	nav:hover .forAnimate{
 		opacity: 1;
 	}

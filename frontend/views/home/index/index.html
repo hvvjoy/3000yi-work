@@ -8,10 +8,19 @@
     </style>  
 {% endblock %}  
 {% block content %}
-    <div class='header-1'><h1>{{ user }}</h1></div>  
-    <p class="important">  
-        Welcome on my awesome homepage.  
-    </p>  
+    <div class='header-1 mt-10 mb-20'>
+    	
+    	<ul class='projects'>
+    	{% for item in projects %}
+    		<li class='f-left ml-10 mr-10'><a href='#'>{{ item.title }} {{ loop.index }}</a></li>
+    	{% endfor %}
+    		<div class='clearfix'></div>
+    	</ul>
+    	
+    </div>  
+    <ul>
+    	{% for item in tasks %}
+    		<li class='col-sm-2 task-item bd-gray-1 mr-5 mb-10'>{{ item.title }} {{ loop.index }}</li>
+    	{% endfor %}
+    </ul>
 {% endblock %}  
-
-

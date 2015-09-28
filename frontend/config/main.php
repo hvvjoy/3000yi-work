@@ -10,6 +10,7 @@ return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'defaultRoute' => 'home/index/index',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'user' => [
@@ -37,6 +38,7 @@ return [
                     // Array of twig options:
                     'options' => [
                         'auto_reload' => true,
+                        'debug' => true,
                     ],
                     'globals' => ['html' => '\yii\helpers\Html'],
                     'uses' => ['yii\bootstrap'],

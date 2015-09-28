@@ -59,7 +59,21 @@ class IndexController extends Controller
     }
 
 	public function actionIndex(){
-		return $this->renderPartial('index.html',['user'=>'Hugo.huang','js'=>JS,'css'=>CSS]);
+        $query = new \yii\db\Query();
+        $tasks = $query->select('*')
+                ->from('task')
+                ->all();
+
+        $projects = $query->select('*')->from('project')->where(['user_id'=>2])->limit(20)->all(); 
+
+        $data = [
+                'user' => 'Hugo.huang',
+                'js' => JS,
+                'css' => CSS.',css/home/index.css',
+                'tasks' => $tasks,
+                'projects' => $projects,
+            ];
+		return $this->renderPartial('index.html', $data);
 	}
 
 }	
