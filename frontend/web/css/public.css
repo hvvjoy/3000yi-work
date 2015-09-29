@@ -1,9 +1,11 @@
-
+body{
+	font-family: "微软雅黑";
+}
 ul{
 	list-style: none;
 }
 .top{
-	height:60px;border-bottom:1px solid #ccc;background:#222;box-shadow:0 0px 5px 2px gray;
+	height:50px;border-bottom:1px solid #333;background:#222;box-shadow:0 0px 5px 2px gray;
 }
 .ml-5{
 	margin-left: 5px;
@@ -40,11 +42,6 @@ ul{
 .bd-gray-1{
 	border:1px solid #666;
 }
-
-
-
-
-
 
 
 
@@ -141,14 +138,14 @@ ul{
 
 		/*colors dropdown box text */
 		.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-			color: #eee;
+			color: #ddd;
 		}
 
 		/*gives sidebar width/height*/
 		nav.sidebar{
-			width: 200px;
+			width: 260px;
 			height: 100%;
-			margin-left: -160px;
+			margin-left: -200px;
 			float: left;
 			z-index: 8000;
 			margin-bottom: 0px;
@@ -156,7 +153,7 @@ ul{
 
 		/*give sidebar 100% width;*/
 		nav.sidebar li {
-			width: 100%;
+			width: 100%;padding-left:27px;
 		}
 
 		/* Move nav to full on mouse over*/
@@ -212,4 +209,9 @@ ul{
 	section{
 		padding-left: 15px;
 	}
+
+#navbar .active{
+	background:#000; 
+}
+
 /* end sidebar */

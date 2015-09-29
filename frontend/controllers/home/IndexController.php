@@ -64,7 +64,9 @@ class IndexController extends Controller
                 ->from('task')
                 ->all();
 
-        $projects = $query->select('*')->from('project')->where(['user_id'=>2])->limit(20)->all(); 
+        $projects = $query->select('*')->from('project p')
+        		  ->leftjoin('project_user as pu','p.id=pu.project_id')
+        		  ->where(['user_id'=>2])->limit(20)->all(); 
 
         $data = [
                 'user' => 'Hugo.huang',
