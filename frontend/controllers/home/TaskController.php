@@ -14,7 +14,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
-class IndexController extends Controller
+class TaskController extends Controller
 {
 
 	public function behaviors()
@@ -72,6 +72,7 @@ class IndexController extends Controller
                 'user' => 'Hugo.huang',
                 'js' => JS,
                 'css' => CSS.',css/home/index.css',
+                'nav' => 'task',
                 'tasks' => $tasks,
                 'projects' => $projects,
             ];

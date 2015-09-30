@@ -1,3 +1,6 @@
 .task-item{
 	height:100px; overflow: hidden;
 }
+.item-detail{
+	height:100px; border:1px solid #ccc; padding:6px;
+}

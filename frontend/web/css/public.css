@@ -8,6 +8,9 @@ body{
 ul{
 	list-style: none; padding:0;
 }
+a{
+	outline: none;
+}
 .top{
 	height:46px;border-bottom:1px solid #333;background:#222;box-shadow:0 0px 5px 2px gray; width:100%;
 }
@@ -53,8 +56,6 @@ ul{
 	border:1px solid #666;
 }
 
-
-
 .h-max{
 	height:100%; 
 }
@@ -95,8 +96,4 @@ ul{
   padding: 0 8px;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.list-group-item{
-	
 }
