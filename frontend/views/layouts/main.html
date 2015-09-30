@@ -8,21 +8,49 @@
         {% endblock %}
     </head>
     <body>
-    	<div class="container-fluid h-max">
+		<div>
     		{% block top %}
-	    	<div class='top row'>
+	    	<div class='top'>
 	    		<button aria-controls="navbar" aria-expanded="false" data-target="#bs-sidebar-navbar-collapse-1" data-toggle="collapse" class="btn btn-xs navbar-toggle collapsed" id="nav-btn" type="button">
-                    <i class="glyphicon glyphicon-th-list"> 导航</i>
-            	</button>
+	                <i class="glyphicon glyphicon-th-list"> 导航</i>
+	        	</button>
 	    	</div>
 	    	{% endblock %}
-	    	<div class="row h-max">
-	    		<div class='page-left h-max hidden-xs' >
+	    	<div>
+	    		<div class='page-left f-left hidden-xs col-xs-2' id='page_left' >
 	    			{% include "@app/views/home/sidebar.html" %}
 	    		</div>
-	    		<div class='visible-xs'>
+	    		<div class='visible-xs container-fluid'>
+	    			
+		    			<div class="list-group collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1" style='width:100%; margin:5px auto;'>
+					        <a href="#" class="list-group-item">
+					            <i class="fa fa-tags"></i> &nbsp;&nbsp;任务
+					        </a>
+					        <a href="#" class="list-group-item">
+					            <i class="fa fa-bug"></i> &nbsp;&nbsp;报错
+					        </a>
+					        <a href="#" class="list-group-item">
+					            <i class="fa fa-book"></i> &nbsp;&nbsp;建议
+					        </a>
+					        <a href="#" class="list-group-item">
+					            <i class="fa fa-sticky-note"></i> &nbsp;&nbsp;日志
+					        </a>
+					        <a href="#" class="list-group-item">
+					            <i class="fa fa-arrows"></i> &nbsp;&nbsp;安排
+					        </a>
+					        <a href="#" class="list-group-item">
+					            <i class="fa fa-users"></i> &nbsp;&nbsp;团队
+					        </a>
+					        <a href="#" class="list-group-item">
+					            <i class="fa fa-home"></i> &nbsp;&nbsp;帐号
+					        </a>
+					        <a href="#" class="list-group-item">
+					            <i class="fa fa-cog"></i> &nbsp;&nbsp;设置
+					        </a>
+					   
+				    </div>    
 	    			<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse navbar-inverse" id="bs-sidebar-navbar-collapse-1">
+					<!--div class="collapse navbar-collapse navbar-inverse col-xs-12" id="bs-sidebar-navbar-collapse-1">
 						<ul class="nav navbar-nav" id='navbar2'>
 							
 							<li ><a href="#"><i class="fa fa-tags"></i> 任务</a></li>
@@ -44,14 +72,18 @@
 							</li>
 							
 						</ul>
-					</div>
+					</div-->
 	    		</div>
-	    		<div class='page-right col-xs-12'>
-	    			{% block content %}{% endblock %}
+	    		<div class='page-right f-left h-max col-xs-12 col-sm-10 col-md-10'> 
+	    			<div class='container-fluid'>
+	    				<div class='row'>
+	    				{% block content %}{% endblock %}
+	    				</div>
+	    			</div>
 	    		</div>
+	    		<div class='clearfix'></div>
 	    	</div>
 	    	<div class='clearfix'></div>
     	</div>
-    	
     </body>
 </html>
