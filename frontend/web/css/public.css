@@ -12,7 +12,7 @@ a{
 	outline: none;
 }
 .top{
-	height:46px;border-bottom:1px solid #333;background:#222;box-shadow:0 0px 5px 2px gray; width:100%;
+	height:46px;border-bottom:1px solid #ccc;box-shadow:0 0px 5px 2px gray; width:100%;
 }
 .ml-5{
 	margin-left: 5px;

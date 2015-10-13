@@ -20,24 +20,23 @@
     		<div class='clearfix'></div>
     	</ul>
     </div>  
-    <div class='col-sm-9'>
+    <div class='col-sm-12 col-md-10'>
     	{% for item in tasks %}
-    		<div class="row">
+    		<div class="row" style="border-bottom:1px solid lightgray;">
                 <div style="min-height:152px;" class="col-sm-12 col-xs-12 post">
                     <div class="row">
                         <div class="col-sm-12 col-xs-12 mb-5">
-                            <h4><strong><a href="/article/show-45.shtml" target="_blank" class="a-1">
+                            <h4 class='f-left'><strong><a href="/article/show-45.shtml" target="_blank" class="a-1">
                         {{ item.title }} . {{ loop.index }}</a>
                         </strong>
                         </h4>
+                        
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-xs-12 post-header-line">
-                            <i class="glyphicon glyphicon-map-marker"></i>
-                            <span class="orange-1">Hugo.Huang</span>
-                            &nbsp;&nbsp;|&nbsp;&nbsp;
-                            <i class="glyphicon glyphicon-tags"></i>
+                            <i class="glyphicon glyphicon-tag"></i>
+                            
                             &nbsp;修复问题                            &nbsp;&nbsp;|&nbsp;&nbsp; 
                             <i class="glyphicon glyphicon-fire"></i>
                             &nbsp;紧急度3                            &nbsp;&nbsp;|&nbsp;&nbsp; 
@@ -45,9 +44,7 @@
                             &nbsp;困难度1                            &nbsp;&nbsp;|&nbsp;&nbsp;
                             <i class="glyphicon glyphicon-hourglass"></i> 
 
-                            &nbsp;进度60%                            &nbsp;&nbsp;|&nbsp;&nbsp;                            
-                            <i class="glyphicon glyphicon-calendar"></i>
-                                                        3个月前
+                            &nbsp;进度60%                            
                                                          &nbsp;&nbsp;|
                              &nbsp;&nbsp;
                              598次浏览&nbsp;&nbsp;
@@ -62,13 +59,12 @@
                         </div>
 
                     </div>
-                    <div class="row pt-6 mb-15">
+                    <span style='color:#666;font-size:13px;'>  </span>
+                    <div class="row pt-6 mt-10">
                                                 <div class="col-md-12">
                             <p>
-                                
-                            <a href="/article/show-45.shtml" target="_blank" class="a-9 s15">
-                            有没有跟飞语集一样靠谱的地方，app也行，只要靠谱无中介，求知道的说一下，感激不尽                           
-                            </a>
+                             
+                            有没有跟飞语集一样靠谱的地方，app也行，只要靠谱无中介，求知道的说一下，感激不尽                          
                             
                             </p>
                         </div>
@@ -80,7 +76,10 @@
                         </div>
                         
                     </div>
-                    
+                   <div class="f-right mt-10" style='color:#333;font-size:13px;'>
+                        创建 : Vincent.mi  &nbsp;&nbsp;|&nbsp;&nbsp;
+                        执行 : Hugo.huang，faith，aya，henry &nbsp;&nbsp;|&nbsp;&nbsp;
+                        2015-06-06 11:59:22</div>
                 </div>
             </div>
     	{% endfor %}
