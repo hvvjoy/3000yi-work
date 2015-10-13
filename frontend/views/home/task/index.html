@@ -1,0 +1,88 @@
+{% extends "@app/views/layouts/main.html" %}
+
+{% block title %}{{ user }}{% endblock %}  
+{% block head %}  
+    {{ parent() }}  
+    <style type="text/css">  
+        .important { color: #336699; }  
+    </style>  
+{% endblock %}  
+{% block content %}
+    <div class='header-1 mt-10 mb-10'>
+    	<ul class='projects'>
+    	{% for item in projects %}
+    		<li class='f-left ml-10 mr-10'>
+                <div style="height:100px;border:1px solid yellow">
+                    <a href='#'>{{ item.title }} {{ loop.index }}</a>
+                </div>
+                </li>
+    	{% endfor %}
+    		<div class='clearfix'></div>
+    	</ul>
+    </div>  
+    <div class='col-sm-12 col-md-10'>
+    	{% for item in tasks %}
+    		<div class="row" style="border-bottom:1px solid lightgray;">
+                <div style="min-height:152px;" class="col-sm-12 col-xs-12 post">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 mb-5">
+                            <h4 class='f-left'><strong><a href="/article/show-45.shtml" target="_blank" class="a-1">
+                        {{ item.title }} . {{ loop.index }}</a>
+                        </strong>
+                        </h4>
+                        
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12 post-header-line">
+                            <i class="glyphicon glyphicon-tag"></i>
+                            
+                            &nbsp;修复问题                            &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            <i class="glyphicon glyphicon-fire"></i>
+                            &nbsp;紧急度3                            &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            <i class="glyphicon glyphicon-pushpin"></i>
+                            &nbsp;困难度1                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <i class="glyphicon glyphicon-hourglass"></i> 
+
+                            &nbsp;进度60%                            
+                                                         &nbsp;&nbsp;|
+                             &nbsp;&nbsp;
+                             598次浏览&nbsp;&nbsp;
+                             |&nbsp;&nbsp; 
+                            
+                                   <i class="glyphicon glyphicon-comment"></i>
+                            <span><a href="/article/show-45.shtml#msgpoint" class="a-1">2</a> 条留言</span>
+                            <!-- i class="glyphicon glyphicon-thumbs-up"></i>
+                            0 &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            <i class="glyphicon glyphicon-thumbs-down"></i -->
+
+                        </div>
+
+                    </div>
+                    <span style='color:#666;font-size:13px;'>  </span>
+                    <div class="row pt-6 mt-10">
+                                                <div class="col-md-12">
+                            <p>
+                             
+                            有没有跟飞语集一样靠谱的地方，app也行，只要靠谱无中介，求知道的说一下，感激不尽                          
+                            
+                            </p>
+                        </div>
+                                                <div class="col-md-12 mt-10 hidden-xs">
+                            <ul class="channel-thumb">
+                                                                <div class="void"></div>
+                            </ul>
+                            <div class="void"></div>
+                        </div>
+                        
+                    </div>
+                   <div class="f-right mt-10" style='color:#333;font-size:13px;'>
+                        创建 : Vincent.mi  &nbsp;&nbsp;|&nbsp;&nbsp;
+                        执行 : Hugo.huang，faith，aya，henry &nbsp;&nbsp;|&nbsp;&nbsp;
+                        2015-06-06 11:59:22</div>
+                </div>
+            </div>
+    	{% endfor %}
+        <div class='clearfix'></div>
+    </div>
+{% endblock %}  

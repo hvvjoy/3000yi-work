@@ -1,0 +1,99 @@
+html{
+	height:100%; 
+}
+body{
+	font-family: "微软雅黑"; min-height:100%; margin:0;padding:0; height:100%; 
+}
+
+ul{
+	list-style: none; padding:0;
+}
+a{
+	outline: none;
+}
+.top{
+	height:46px;border-bottom:1px solid #ccc;box-shadow:0 0px 5px 2px gray; width:100%;
+}
+.ml-5{
+	margin-left: 5px;
+}
+.mr-5{
+	margin-right: 5px;
+}
+.ml-10{
+	margin-left:10px;
+}
+.mr-10{
+	margin-right: 10px;
+}
+.mt-10{
+	margin-top: 10px;
+}
+.mb-10{
+	margin-bottom: 10px;
+}
+.ml-20{
+	margin-left:20px;
+}
+.mr-20{
+	margin-right: 20px;
+}
+.mt-20{
+	margin-top: 20px;
+}
+.mb-20{
+	margin-bottom: 20px;
+}
+
+.f-left{
+	float:left;
+}
+.f-right{
+	float:right;
+}
+
+.bd-gray-1{
+	border:1px solid #666;
+}
+
+.h-max{
+	height:100%; 
+}
+.h-inherit{
+	height:inherit;
+}
+
+.mini-submenu{
+  display:none;  
+  background-color: rgba(0, 0, 0, 0);  
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  padding: 9px;  
+  /*position: relative;*/
+  width: 42px;
+
+}
+
+.mini-submenu:hover{
+  cursor: pointer;
+}
+
+.mini-submenu .icon-bar {
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  width: 22px;
+  margin-top: 3px;
+}
+
+.mini-submenu .icon-bar {
+  background-color: #000;
+}
+
+#slide-submenu{
+  background: rgba(0, 0, 0, 0.45);
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
