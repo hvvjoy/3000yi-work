@@ -10,19 +10,42 @@
     <body>
 		<div>
     		{% block top %}
-	    	<div class='top'>
+	    	<div class='header'>
+	    		<div class='container-fluid'>
+	    		
+	    		</div>
 	    		<button aria-controls="navbar" aria-expanded="false" data-target="#bs-sidebar-navbar-collapse-1" data-toggle="collapse" class="btn btn-xs navbar-toggle collapsed" id="nav-btn" type="button">
 	                <i class="glyphicon glyphicon-th-list"> 导航</i>
 	        	</button>
 	    	</div>
+    		<div class='container-fluid nav-top'>
+    			<div class='row'>
+    				<ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    			</div>
+    		</div>
 	    	{% endblock %}
 	    	<div>
-	    		<div class='page-left f-left hidden-xs col-xs-2' role='complementary' id='page_left' >
+	    		<!-- div class='page-left f-left hidden-xs col-xs-2' role='complementary' id='page_left' >
 	    			<div class='row'>
 	    			{% include "@app/views/home/sidebar.html" %}
 	    			</div>
-	    		</div>
-	    		<div class='visible-xs container-fluid'>
+	    		</div -->
+	    		<!-- div class='visible-xs container-fluid'>
 	    			
 		    			<div class="list-group collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1" style='width:100%; margin:5px auto;'>
 					        <a href="#" class="list-group-item" id='nav-top-task'>
@@ -51,7 +74,7 @@
 					        </a>
 					   
 				    </div>    
-	    		</div>
+	    		</div -->
 	    		<div class='page-right f-left h-max col-xs-12 col-sm-10 col-md-10' role='main'> 
 	    			<div class='container-fluid'>
 	    				<div class='row'>

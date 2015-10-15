@@ -1,3 +1,14 @@
+.header{
+	background:#3a3a3a none repeat scroll 0 0;
+    line-height: 55px;
+    min-height: 55px;border-bottom:1px solid #000;
+}
+.nav-top{
+	background:#303236 none repeat scroll 0 0;
+    line-height: 55px;
+    min-height: 55px;
+}
+
 .task-item{
 	height:100px; overflow: hidden;
 }
