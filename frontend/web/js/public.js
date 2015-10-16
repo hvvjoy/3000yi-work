@@ -1,0 +1,11 @@
+$(document).on("scroll",function(){
+	if($(document).scrollTop()>200){ 
+		$(".nav-list").stop().animate({
+			height:'55px'
+		});
+	}else{
+		$(".nav-list").stop().animate({
+			height:'100px'
+		});
+	}		
+});

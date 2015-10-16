@@ -1,99 +1,28 @@
-html{
-	height:100%; 
+.nav-1{
+	background:#3a3a3a none repeat scroll 0 0;
+    line-height: 55px;
+    min-height: 55px;border-bottom:1px solid #000;
 }
-body{
-	font-family: "微软雅黑"; min-height:100%; margin:0;padding:0; height:100%; 
+.nav-2{
+	background:#303236 none repeat scroll 0 0;
+    line-height: 55px;
+    min-height: 55px;
 }
-
-ul{
-	list-style: none; padding:0;
-}
-a{
-	outline: none;
-}
-.top{
-	height:46px;border-bottom:1px solid #ccc;box-shadow:0 0px 5px 2px gray; width:100%;
-}
-.ml-5{
-	margin-left: 5px;
-}
-.mr-5{
-	margin-right: 5px;
-}
-.ml-10{
-	margin-left:10px;
-}
-.mr-10{
-	margin-right: 10px;
-}
-.mt-10{
-	margin-top: 10px;
-}
-.mb-10{
-	margin-bottom: 10px;
-}
-.ml-20{
-	margin-left:20px;
-}
-.mr-20{
-	margin-right: 20px;
-}
-.mt-20{
-	margin-top: 20px;
-}
-.mb-20{
-	margin-bottom: 20px;
-}
-
-.f-left{
+.nav-list li{
 	float:left;
 }
-.f-right{
-	float:right;
+.nav-list li a{
+	padding:0 30px;height:55px;overflow:hidden;display:block;color:#efefef;
 }
-
-.bd-gray-1{
-	border:1px solid #666;
+.nav-list li a:hover{
+	background:#000; text-decoration:none;
 }
-
-.h-max{
-	height:100%; 
+.nav-list li .active{
+	background:#000; text-decoration:none;
 }
-.h-inherit{
-	height:inherit;
+.task-item{
+	height:100px; overflow: hidden;
 }
-
-.mini-submenu{
-  display:none;  
-  background-color: rgba(0, 0, 0, 0);  
-  border: 1px solid rgba(0, 0, 0, 0.9);
-  border-radius: 4px;
-  padding: 9px;  
-  /*position: relative;*/
-  width: 42px;
-
-}
-
-.mini-submenu:hover{
-  cursor: pointer;
-}
-
-.mini-submenu .icon-bar {
-  border-radius: 1px;
-  display: block;
-  height: 2px;
-  width: 22px;
-  margin-top: 3px;
-}
-
-.mini-submenu .icon-bar {
-  background-color: #000;
-}
-
-#slide-submenu{
-  background: rgba(0, 0, 0, 0.45);
-  display: inline-block;
-  padding: 0 8px;
-  border-radius: 4px;
-  cursor: pointer;
+.item-detail{
+	height:100px; border:1px solid #ccc; padding:6px;
 }
