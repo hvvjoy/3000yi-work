@@ -80,5 +80,15 @@ class TaskController extends BaseController
             ];
 		return  $this->renderPartial('index.html', $data);
 	}
+	
+	public function actionAdd(){
+		$data = array(
+				'title' => '任务中心',
+				'js' => JS,
+				'css' => CSS.',css/home/index.css',
+				'nav' => 'task',
+		);
+		return $this->renderPartial('add.html',$data);
+	}
 
 }	

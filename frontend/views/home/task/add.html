@@ -1,0 +1,23 @@
+{% extends "@app/views/layouts/main.html" %}
+
+{% block title %}{{ title }}{% endblock %}  
+{% block head %}  
+    {{ parent() }}  
+    <style type="text/css">  
+        .important { color: #336699; }  
+    </style>  
+{% endblock %}  
+{% block content %}
+<table class=''>
+	<tr>
+		<td>标题</td>
+		<td>紧急度</td>
+		<td>困难度</td>
+		<td>指派：</td>
+	</tr>
+	<tr>
+		<td colspan='4'></td>
+	</tr>
+</table>
+	
+{% endblock %}  
