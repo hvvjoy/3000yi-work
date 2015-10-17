@@ -26,3 +26,17 @@
 .item-detail{
 	height:100px; border:1px solid #ccc; padding:6px;
 }
+
+.page-left{
+	height:100%;position:relative;
+}
+
+/* list */
+.item-title{
+	height:45px;line-height:42px;
+}
+.post:hover{
+	background:#fffae6;
+}
+
+

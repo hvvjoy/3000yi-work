@@ -2,6 +2,7 @@
 
 namespace frontend\controllers\home;
 
+
 use Yii;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -10,11 +11,12 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
-use yii\web\Controller;
+//use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use frontend\controllers\BaseController;
 
-class TaskController extends Controller
+class TaskController extends BaseController
 {
 
 	public function behaviors()
@@ -69,14 +71,14 @@ class TaskController extends Controller
         		  ->where(['user_id'=>2])->limit(20)->all(); 
 
         $data = [
-                'user' => 'Hugo.huang',
+                'title' => '任务中心',
                 'js' => JS,
                 'css' => CSS.',css/home/index.css',
                 'nav' => 'task',
                 'tasks' => $tasks,
                 'projects' => $projects,
             ];
-		return $this->renderPartial('index.html', $data);
+		return  $this->renderPartial('index.html', $data);
 	}
 
 }	

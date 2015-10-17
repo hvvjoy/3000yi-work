@@ -235,7 +235,7 @@ class View extends Component
 
         if ($this->beforeRender($viewFile, $params)) {
             Yii::trace("Rendering view file: $viewFile", __METHOD__);
-            $ext = pathinfo($viewFile, PATHINFO_EXTENSION);
+            $ext = pathinfo($viewFile, PATHINFO_EXTENSION); 
             if (isset($this->renderers[$ext])) {
                 if (is_array($this->renderers[$ext]) || is_string($this->renderers[$ext])) {
                     $this->renderers[$ext] = Yii::createObject($this->renderers[$ext]);

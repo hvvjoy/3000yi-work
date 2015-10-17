@@ -1,6 +1,6 @@
 {% extends "@app/views/layouts/main.html" %}
 
-{% block title %}{{ user }}{% endblock %}  
+{% block title %}{{ title }}{% endblock %}  
 {% block head %}  
     {{ parent() }}  
     <style type="text/css">  
@@ -8,29 +8,75 @@
     </style>  
 {% endblock %}  
 {% block content %}
-    <div class='header-1 mt-10 mb-10'>
-    	<ul class='projects'>
-    	{% for item in projects %}
-    		<li class='f-left ml-10 mr-10'>
-                <div style="height:100px;border:1px solid yellow">
-                    <a href='#'>{{ item.title }} {{ loop.index }}</a>
-                </div>
-                </li>
-    	{% endfor %}
-    		<div class='clearfix'></div>
-    	</ul>
-    </div>  
+<div class='container mt-10 mb-10'>
+   			<div class='row'>
+   				<div class="col-sm-10 col-xs-12" style="margin-bottom:6px;" id="header-addon-1">
+	               <div class="btn-group">
+						  <button type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <i class="glyphicon glyphicon-fire"></i> &nbsp;紧急度 <span class="caret"></span>
+						    <span class="sr-only">Toggle Dropdown</span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">极紧急</a></li>
+						    <li><a href="#">紧急</a></li>
+						    <li><a href="#">普通</a></li>
+						    <li><a href="#">可缓</a></li>
+						  </ul>
+					</div>
+	                <div class="btn-group">
+						  <button type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <i class="glyphicon glyphicon-pushpin"></i> &nbsp;困难度 <span class="caret"></span>
+						    <span class="sr-only">Toggle Dropdown</span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">很难</a></li>
+						    <li><a href="#">较难</a></li>
+						    <li><a href="#">普通</a></li>
+						    <li><a href="#">简单</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group">
+						  <button type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <i class="glyphicon glyphicon-hourglass"></i> &nbsp;完成度 <span class="caret"></span>
+						    <span class="sr-only">Toggle Dropdown</span>
+						  </button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">未完成</a></li>
+						    <li><a href="#">已完成</a></li>
+						    <li><a href="#">延迟处理</a></li>
+						  </ul>
+					</div>
+					<div class="btn-group f-right">
+						  <button type="button" class="btn btn-success"><i class="fa fa-edit"></i> &nbsp;发布任务</button>
+						  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <span class="caret"></span>
+						    <span class="sr-only">Toggle Dropdown</span>
+						  </button>
+						  <ul class="dropdown-menu" >
+						    <li><a href="#">报错</a></li>
+						    <li><a href="#">建议</a></li>
+						    <li><a href="#">日志</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">规划</a></li>
+						  </ul>
+					</div>
+   			</div>
+</div>
     <div class='col-sm-12 col-md-10'>
     	{% for item in tasks %}
     		<div class="row" style="border-bottom:1px solid lightgray;">
                 <div style="min-height:152px;" class="col-sm-12 col-xs-12 post">
                     <div class="row">
-                        <div class="col-sm-12 col-xs-12 mb-5">
+                        <div class="col-sm-12 col-xs-12 mb-5  item-title">
                             <h4 class='f-left'><strong><a href="/article/show-45.shtml" target="_blank" class="a-1">
                         {{ item.title }} . {{ loop.index }}</a>
                         </strong>
                         </h4>
-                        
+                            <span class='ml-10'>
+                          
+  <i class="glyphicon glyphicon-comment"></i> 4
+</span>
+                              
                         </div>
                     </div>
                     <div class="row">
@@ -45,17 +91,8 @@
                             <i class="glyphicon glyphicon-hourglass"></i> 
 
                             &nbsp;进度60%                            
-                                                         &nbsp;&nbsp;|
-                             &nbsp;&nbsp;
-                             598次浏览&nbsp;&nbsp;
-                             |&nbsp;&nbsp; 
-                            
-                                   <i class="glyphicon glyphicon-comment"></i>
-                            <span><a href="/article/show-45.shtml#msgpoint" class="a-1">2</a> 条留言</span>
-                            <!-- i class="glyphicon glyphicon-thumbs-up"></i>
-                            0 &nbsp;&nbsp;|&nbsp;&nbsp; 
-                            <i class="glyphicon glyphicon-thumbs-down"></i -->
-
+                            &nbsp;&nbsp;|&nbsp;&nbsp; 创建：vincent
+							&nbsp;&nbsp;|&nbsp;&nbsp; 执行：Hugo , Topcat, Ethel, AABC, bbbccxcx
                         </div>
 
                     </div>
@@ -76,13 +113,14 @@
                         </div>
                         
                     </div>
-                   <div class="f-right mt-10" style='color:#333;font-size:13px;'>
+                   <!--  div class="f-right mt-10" style='color:#333;font-size:13px;'>
                         创建 : Vincent.mi  &nbsp;&nbsp;|&nbsp;&nbsp;
                         执行 : Hugo.huang，faith，aya，henry &nbsp;&nbsp;|&nbsp;&nbsp;
-                        2015-06-06 11:59:22</div>
+                        2015-06-06 11:59:22</div -->
                 </div>
             </div>
     	{% endfor %}
         <div class='clearfix'></div>
     </div>
+	
 {% endblock %}  
