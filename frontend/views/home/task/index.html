@@ -8,9 +8,7 @@
     </style>  
 {% endblock %}  
 {% block content %}
-<div class='container mt-10 mb-10'>
-   			<div class='row'>
-   				<div class="col-sm-10 col-xs-12" style="margin-bottom:6px;" id="header-addon-1">
+   				<div class="col-sm-10 col-xs-12 mb-10"  id="header-addon-1">
 	               <div class="btn-group">
 						  <button type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    <i class="glyphicon glyphicon-fire"></i> &nbsp;紧急度 <span class="caret"></span>
@@ -47,7 +45,7 @@
 						  </ul>
 					</div>
 					<div class="btn-group f-right">
-						  <button type="button" class="btn btn-success"><i class="fa fa-edit"></i> &nbsp;发布任务</button>
+						  <button type="button" class="btn btn-success" onclick="url_to('task')"><i class="fa fa-edit"></i> &nbsp;发布任务</button>
 						  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    <span class="caret"></span>
 						    <span class="sr-only">Toggle Dropdown</span>
@@ -61,7 +59,7 @@
 						  </ul>
 					</div>
    			</div>
-</div>
+
     <div class='col-sm-12 col-md-10'>
     	{% for item in tasks %}
     		<div class="row" style="border-bottom:1px solid lightgray;">
@@ -85,14 +83,14 @@
                             
                             &nbsp;修复问题                            &nbsp;&nbsp;|&nbsp;&nbsp; 
                             <i class="glyphicon glyphicon-fire"></i>
-                            &nbsp;紧急度3                            &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            &nbsp;紧急度{{ item.priority }}                            &nbsp;&nbsp;|&nbsp;&nbsp; 
                             <i class="glyphicon glyphicon-pushpin"></i>
-                            &nbsp;困难度1                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                            &nbsp;困难度 {{ item.difficulty }}                         &nbsp;&nbsp;|&nbsp;&nbsp;
                             <i class="glyphicon glyphicon-hourglass"></i> 
 
-                            &nbsp;进度60%                            
+                            &nbsp;进度{{ item.progress }}%                            
                             &nbsp;&nbsp;|&nbsp;&nbsp; 创建：vincent
-							&nbsp;&nbsp;|&nbsp;&nbsp; 执行：Hugo , Topcat, Ethel, AABC, bbbccxcx
+							&nbsp;&nbsp;|&nbsp;&nbsp; 执行：{{ item.assign_to }}
                         </div>
 
                     </div>
@@ -101,7 +99,7 @@
                                                 <div class="col-md-12">
                             <p>
                              
-                            有没有跟飞语集一样靠谱的地方，app也行，只要靠谱无中介，求知道的说一下，感激不尽                          
+                           {{ item.content }}                        
                             
                             </p>
                         </div>

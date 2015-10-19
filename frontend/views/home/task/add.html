@@ -8,16 +8,82 @@
     </style>  
 {% endblock %}  
 {% block content %}
-<table class=''>
-	<tr>
-		<td>标题</td>
-		<td>紧急度</td>
-		<td>困难度</td>
-		<td>指派：</td>
-	</tr>
-	<tr>
-		<td colspan='4'></td>
-	</tr>
-</table>
+<button class='btn btn-primary btn-xs' onclick='return history.back();'>返回</button>
+<form method='post' action='/?r=home/task/add'>
+<div class="panel panel-default mt-10">
+	  <table class='table table-bordered'>
+			<tr>
+				<td>标题</td>
+				<td><input type='text' class='form-control'  name="title"/></td>
+				<td>紧急度</td>
+				<td>
+					<select class='form-control' name="priority">
+						<option value='1'>极紧急</option>
+						<option value='2'>紧急</option>
+						<option value='3' selected='selected'>普通</option>
+						<option value='4'>不急</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>困难度</td>
+				<td>
+					<select class='form-control' name="difficulty">
+						<option value='1'>极困难</option>
+						<option value='2'>困难</option>
+						<option value='3' selected='selected'>普通</option>
+						<option value='4'>简单</option>
+					</select>
+				</td>
+				<td>指派</td>
+				<td>
+					<select class='form-control' name="assign_to">
+						<option value='0'>选择</option>
+						<option value='1'>Hugo</option>
+						<option value='2'>Ethel</option>
+						<option>Topcat</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Ethel</option>
+						<option>Topcat</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+						<option>Hugo</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>详细说明</td>
+				<td colspan='3'>
+					<textarea class='form-control' name="content"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td> 
+					<input type="hidden" value="{{ _csrf }}" name="_csrf" />
+					<button class='btn btn-success btn-sm' type='submit'>提交</button>
+				</td>
+			</tr>
+		</table>
+</div>
+
+</form>
 	
 {% endblock %}  
