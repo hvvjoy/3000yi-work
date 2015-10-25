@@ -1,0 +1,30 @@
+{% extends "@app/views/layouts/main.html" %}
+
+{% block title %}{{ title }}{% endblock %}  
+{% block head %}  
+    {{ parent() }}  
+{% endblock %}  
+{% block content %}
+
+<button class='btn btn-primary btn-xs' onclick='return history.back();'>返回</button>
+<div class='col-sm-12 mt-10'>
+	{{ res.title }}
+	<hr />
+	<i class="glyphicon glyphicon-tag"></i>
+                            
+                            &nbsp;修复问题                            &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            <i class="glyphicon glyphicon-fire"></i>
+                            &nbsp;紧急度{{ item.priority }}                            &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            <i class="glyphicon glyphicon-pushpin"></i>
+                            &nbsp;困难度 {{ item.difficulty }}                         &nbsp;&nbsp;|&nbsp;&nbsp;
+                            <i class="glyphicon glyphicon-hourglass"></i> 
+
+                            &nbsp;进度{{ item.progress }}%                            
+                            &nbsp;&nbsp;|&nbsp;&nbsp; 创建：vincent
+							&nbsp;&nbsp;|&nbsp;&nbsp; 执行：{{ item.assign_to }}
+	<br />
+	{{ res.content }}
+
+</div>
+
+{% endblock %}
