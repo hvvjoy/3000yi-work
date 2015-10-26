@@ -17,6 +17,7 @@ return [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
         ],
+    	'urlManager' => require(__DIR__.'/route.php'),
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [

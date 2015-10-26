@@ -9,19 +9,29 @@
 {% endblock %}  
 {% block content %}
    				<div class="col-sm-10 col-xs-12 mb-10"  id="header-addon-1">
-	               <div class="btn-group">
-						  <button type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   					<div class="btn-group  mt-10">
+						  <button id='priority_btn' type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    <i class="glyphicon glyphicon-fire"></i> &nbsp;我的任务 <span class="caret"></span>
+						    <span class="sr-only">Toggle Dropdown</span>
+						  </button>
+						  <ul class="dropdown-menu" id='priority_items'>
+						    <li><a href="#" data='2'>我的任务</a></li>
+						    <li><a href="#" data='1'>项目任务</a></li>
+						  </ul>
+					</div>
+	             			 <div class="btn-group  mt-10">
+						  <button id='priority_btn' type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    <i class="glyphicon glyphicon-fire"></i> &nbsp;紧急度 <span class="caret"></span>
 						    <span class="sr-only">Toggle Dropdown</span>
 						  </button>
-						  <ul class="dropdown-menu">
-						    <li><a href="#">极紧急</a></li>
-						    <li><a href="#">紧急</a></li>
-						    <li><a href="#">普通</a></li>
-						    <li><a href="#">可缓</a></li>
+						  <ul class="dropdown-menu" id='priority_items'>
+						    <li><a href="#" data='4'>极紧急</a></li>
+						    <li><a href="#" data='3'>紧急</a></li>
+						    <li><a href="#" data='2'>普通</a></li>
+						    <li><a href="#" data='1'>可缓</a></li>
 						  </ul>
 					</div>
-	                <div class="btn-group">
+	                		<div class="btn-group hidden-xs hidden-sm  mt-10">
 						  <button type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    <i class="glyphicon glyphicon-pushpin"></i> &nbsp;困难度 <span class="caret"></span>
 						    <span class="sr-only">Toggle Dropdown</span>
@@ -33,7 +43,7 @@
 						    <li><a href="#">简单</a></li>
 						  </ul>
 					</div>
-					<div class="btn-group">
+					<div class="btn-group hidden-xs hidden-sm  mt-10">
 						  <button type="button" class="btn btn-default dropdown-toggle width-160" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    <i class="glyphicon glyphicon-hourglass"></i> &nbsp;完成度 <span class="caret"></span>
 						    <span class="sr-only">Toggle Dropdown</span>
@@ -44,7 +54,7 @@
 						    <li><a href="#">延迟处理</a></li>
 						  </ul>
 					</div>
-					<div class="btn-group f-right">
+					<div class="btn-group f-right  mt-10">
 						  <button type="button" class="btn btn-success" onclick="url_to('task')"><i class="fa fa-edit"></i> &nbsp;发布任务</button>
 						  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    <span class="caret"></span>
@@ -66,22 +76,22 @@
                 <div style="min-height:152px;" class="col-sm-12 col-xs-12 post">
                     <div class="row">
                         <div class="col-sm-12 col-xs-12 mb-5  item-title">
-                            <h4 class='f-left'><strong><a href="/article/show-45.shtml" target="_blank" class="a-1">
-                        {{ item.title }} . {{ loop.index }}</a>
+                            <h4 class='f-left'><strong><a href="/task/show/{{ item._id }}" class="a-1">
+                        {{ item.title }} </a>
                         </strong>
                         </h4>
                             <span class='ml-10'>
                           
-  <i class="glyphicon glyphicon-comment"></i> 4
+  <i class="glyphicon glyphicon-comment"></i> {{ item.msg|length }}
 </span>
                               
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-xs-12 post-header-line">
-                            <i class="glyphicon glyphicon-tag"></i>
+                            <i class="glyphicon glyphicon-time"></i>
                             
-                            &nbsp;修复问题                            &nbsp;&nbsp;|&nbsp;&nbsp; 
+                            &nbsp;{{ item.create_time }}                            &nbsp;&nbsp;|&nbsp;&nbsp; 
                             <i class="glyphicon glyphicon-fire"></i>
                             &nbsp;紧急度{{ item.priority }}                            &nbsp;&nbsp;|&nbsp;&nbsp; 
                             <i class="glyphicon glyphicon-pushpin"></i>

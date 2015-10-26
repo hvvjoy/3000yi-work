@@ -8,28 +8,49 @@ use Yii;
 use frontend\controllers\BaseController;
 use app\models\TaskForm;
 use yii\mongodb\Query;
+use yii\base\Object;
 
 class TaskController extends BaseController
 {
-
+	protected $mongo;
+	public function __construct($id,$module){
+		parent::__construct($id,$module);
+		$this->mongo = new Query();
+	}
 	public function actionIndex(){
-        $query = new Query;
-		// compose the query
-		$query->select([])
-		    ->from('task')
-		    ->limit(10);
-		// execute the query
-		$rows = $query->all();
-
         
+		$this->mongo->select([])
+		    ->from('task')
+		    ->limit(10)
+			->orderBy(['_id' => SORT_DESC]);
+		
+		$rows = $this->mongo->all();
+
         $data = [
                 'title' => '任务中心',
-                'js' => JS,
+                'js' => JS.',js/home/task.js',
                 'css' => CSS.',css/home/index.css',
                 'nav' => 'task',
                 'tasks' => $rows,
             ];
 		return  $this->renderPartial('index.html', $data);
+	}
+	
+	public function actionShow(){
+			$id = Yii::$app->request->get('id');
+			$this->mongo->select([])
+		    ->from('task')
+		    ->where(['_id'=>$id]);
+		
+		$res = $this->mongo->one();
+        $data = [
+                'title' => '任务中心',
+                'js' => JS,
+                'css' => CSS.',css/home/index.css',
+                'nav' => 'task',
+                'res' => $res,
+            ];
+		return  $this->renderPartial('show.html', $data);
 	}
 	
 	public function actionAdd(){

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<link rel="stylesheet" href="/min/index.php?&f={{ css }}" />
-    	<script src="/min/index.php?f={{ js }}"></script>
+    	<link rel="stylesheet" href="{{ constant('WEB_URL') }}/min/index.php?&f={{ css }}" />
+    	<script src="{{ constant('WEB_URL') }}/min/index.php?f={{ js }}"></script>
         {% block head %}
             <title>{% block title %}{% endblock %} - My Webpage</title>
         {% endblock %}
@@ -56,7 +56,7 @@
 					   
 				    </div>    
 	    		</div>
-	    		<div class='page-right f-left h-max col-xs-12 col-sm-10 col-md-10 mt-10' role='main'> 
+	    		<div class='page-right f-left col-xs-12 col-sm-10 col-md-10' role='main'> 
 	    			<div class='container-fluid'>
 	    				<div class='row'>
 	    				{% block content %}{% endblock %}
